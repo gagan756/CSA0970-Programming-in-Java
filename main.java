@@ -1,17 +1,19 @@
 import java.util.Scanner;
-public class main{
- public static void main(String args[]) {
- int m, year, week, day;
- Scanner s = new Scanner(System.in);
- System.out.print("Enter the number of days:");
- m = s.nextInt();
- year = m / 365;
- m = m % 365;
- System.out.println("No. of years:"+year);
- week = m / 7;
- m = m % 7;
- System.out.println("No. of weeks:"+week);
- day = m;
- System.out.println("No. of days:"+day);
- }
+public class Main
+{
+public static void main(String[] args) {
+int i=0;
+System.out.println("Enter the date/month/year");
+Scanner s=new Scanner(System.in);
+String re=s.next();
+String[] r=re.split("/",3);
+int x=Integer.parseInt(r[2]);
+if(x%4==0)
+{
+System.out.println("It is an leap year");
+}
+else{
+System.out.println("It is not a leap year:");
+}
+}
 }
